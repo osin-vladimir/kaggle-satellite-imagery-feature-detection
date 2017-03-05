@@ -1,1 +1,1 @@
-# Dstl Satellite Imagery Feature Detection - Kaggle Competition 
+# Dstl Satellite Imagery Feature Detection
