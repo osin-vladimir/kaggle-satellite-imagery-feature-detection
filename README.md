@@ -29,7 +29,15 @@ Image
 | zebra stripes | are neat      |    $1 |
 
 ## Useful Literature
-
+1. [Towards Adversarial Retinal Image Synthesis](https://arxiv.org/pdf/1701.08974.pdf)
+2. [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/pdf/1611.07004.pdf)
+3. [Vegetation indices](http://web.pdx.edu/~nauna/resources/8-2012_lecture1-vegetationindicies.pdf)
 
 ## Credits and Inspiration 
+
+
+## Slack for new Kagglers
+* [Open Data Science](http://ods.ai/)
+* [AI-researchers](https://ai-researchers-invite.herokuapp.com/)
+* [KaggleNoobs](https://kagglenoobs.herokuapp.com/)
 
