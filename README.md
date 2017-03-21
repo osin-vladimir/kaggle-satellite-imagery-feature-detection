@@ -10,7 +10,7 @@
  [kernel 1 ](https://www.kaggle.com/resolut/dstl-satellite-imagery-feature-detection/waterway-0-095-lb)
 
  
-## Index
+##  [Index](https://www.kaggle.com/resolut/dstl-satellite-imagery-feature-detection/panchromatic-sharpening) <- Click to see nice kaggle kernel
  Definition 
  Image  
  [kernel 2](https://www.kaggle.com/resolut/dstl-satellite-imagery-feature-detection/panchromatic-sharpening)
