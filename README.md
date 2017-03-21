@@ -3,12 +3,14 @@
 * Panchromatic sharpennig 
 * Index
 * Generative Adversarial Networks
-https://www.kaggle.com/resolut/dstl-satellite-imagery-feature-detection/waterway-0-095-lb
+
+
 
 ## Panchromatic Sharpening  
  Definition 
  Image 
- Link to Kernel 
+ [kernel](https://www.kaggle.com/resolut/dstl-satellite-imagery-feature-detection/waterway-0-095-lb)
+ Link t
  
 ## Index
  Definition 
