@@ -22,8 +22,11 @@ The reflectance is used to calculate different reflectance indices, which sum up
 Definition 
 Image 
 
-table 
-Class Model Score
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 ## Useful Literature
 
