@@ -1,8 +1,27 @@
+## Description 
+
+In this competition, DSTL provides 1km x 1km satellite images in both 3-band and 16-band formats. Main goal is to detect and classify the types of objects found in these regions. 
+
+### Object types
+In a satellite image, you will find lots of different objects like roads, buildings, vehicles, farms, trees, water ways, etc:
+
+1. Buildings - large building, residential, non-residential, fuel storage facility, fortified building
+2. Misc. Manmade structures 
+3. Road 
+4. Track - poor/dirt/cart track, footpath/trail
+5. Trees - woodland, hedgerows, groups of trees, standalone trees
+6. Crops - contour ploughing/cropland, grain (wheat) crops, row (potatoes, turnips) crops
+7. Waterway 
+8. Standing water
+9. Vehicle Large - large vehicle (e.g. lorry, truck,bus), logistics vehicle
+10. Vehicle Small - small vehicle (car, van), motorbike
+
 ## Main ideas
 
 * Panchromatic sharpennig 
 * Reflectance indices
 * Generative Adversarial Networks
+* State-of-the-art CNN for Image Segmentation
 
 ## [Panchromatic Sharpening](https://www.kaggle.com/resolut/dstl-satellite-imagery-feature-detection/waterway-0-095-lb=250x250)  
 
@@ -34,7 +53,8 @@ Image
 3. [Vegetation indices](http://web.pdx.edu/~nauna/resources/8-2012_lecture1-vegetationindicies.pdf)
 
 ## Credits and Inspiration 
-
+1. [Towards Adversarial Retinal Image Synthesis - github](https://github.com/costapt/vess2ret)
+2. 
 
 ## Slack for new Kagglers
 * [Open Data Science](http://ods.ai/)
