@@ -6,22 +6,14 @@ from mxnet.io import DataBatch
 import random
 import tifffile as tiff
 from helpers import Helper
-
 import cv2
+
 
 class FileIter(DataIter):
 
-    def __init__(self,
-                 root_dir,
-                 data_list,
-                 batch_size,
-                 iter_num,
-                 cut_off_size=None,
-                 data_name="data",
-                 label_name="label"):
+    def __init__(self, root_dir, data_list, batch_size, iter_num, cut_off_size=None, data_name="data", label_name="label"):
 
         super(FileIter, self).__init__()
-
         self.data_list = data_list
         self.root_dir = root_dir
         self.cut_off_size = cut_off_size
@@ -62,42 +54,25 @@ class FileIter(DataIter):
         helper = Helper()
 
         # read rgb channels and mask
-        rgb, mask = helper.load_im_polymask(IM_ID, '5', self.root_dir, 'train/train_wkt_v4.csv', 'train/grid_sizes.csv')
+        rgb, mask = helper.load_im_polymask(IM_ID, '5', 'data/three_band/', 'data/train_wkt_v4.csv', 'data/grid_sizes.csv')
         # read m band
         m = tiff.imread(self.root_dir+'{}_M.tif'.format(IM_ID))
-        # read p band
-        p = tiff.imread(self.root_dir+'{}_P.tif'.format(IM_ID))
-        # mean and std values for each channel
-        mean = tiff.imread('train/5/mean_trees_p_rgb.tif')
 
         shape_0 = 3345
         shape_1 = 3338
 
-        # p = cv2.resize(p, (shape_1, shape_0), interpolation=cv2.INTER_CUBIC)[:, :, np.newaxis]
-        # coas = cv2.resize(m[0, :, :], (shape_1, shape_0), interpolation=cv2.INTER_CUBIC)[:, :, np.newaxis]
-        # blue = cv2.resize(m[1, :, :], (shape_1, shape_0), interpolation=cv2.INTER_CUBIC)[:, :, np.newaxis]
-        # gren = cv2.resize(m[2, :, :], (shape_1, shape_0), interpolation=cv2.INTER_CUBIC)[:, :, np.newaxis]
-        # yell = cv2.resize(m[3, :, :], (shape_1, shape_0), interpolation=cv2.INTER_CUBIC)[:, :, np.newaxis]
-        # redd = cv2.resize(m[4, :, :], (shape_1, shape_0), interpolation=cv2.INTER_CUBIC)[:, :, np.newaxis]
-        # rede = cv2.resize(m[5, :, :], (shape_1, shape_0), interpolation=cv2.INTER_CUBIC)[:, :, np.newaxis]
+        # rgb
+        blue = cv2.resize(m[1, :, :], (shape_1, shape_0), interpolation=cv2.INTER_CUBIC)[:, :, np.newaxis]
+        green = cv2.resize(m[2, :, :], (shape_1, shape_0), interpolation=cv2.INTER_CUBIC)[:, :, np.newaxis]
+        red = cv2.resize(m[4, :, :], (shape_1, shape_0), interpolation=cv2.INTER_CUBIC)[:, :, np.newaxis]
+
         # nir1 = cv2.resize(m[6, :, :], (shape_1, shape_0), interpolation=cv2.INTER_CUBIC)[:, :, np.newaxis]
         # nir2 = cv2.resize(m[7, :, :], (shape_1, shape_0), interpolation=cv2.INTER_CUBIC)[:, :, np.newaxis]
 
-        # image = np.concatenate([rgb[:shape_0, :shape_1:,:], nir1, nir2], axis=2)
-        image = np.concatenate([rgb[:shape_0, :shape_1:, :], p[:shape_0, :shape_1, np.newaxis]], axis=2)
+        image = np.concatenate([red, green, blue], axis=2)
+        img_rgb_norm = (image - np.array([ 426.98400879, 464.88424683, 329.17596436]))
 
-        # pm_new = np.concatenate([p, coas, blue, gren, yell, redd, rede, nir1, nir2], axis=2)
-        img_rgb_norm = (image - mean)/2047
-
-        # data augmentations
-        # rotations = [False, 10, 30]
-        # rot_ind = random.Random().randint(0, len(rotations) - 1)
-        #
-        # if rot_ind:
-        #     img_crop = rotate(img_crop, rotations[rot_ind])
-        #     mask_croped = rotate(mask_croped, rotations[rot_ind])
-
-        # swapaxes
+         # swapaxes
         img_rgb_norm = img_rgb_norm
         img_rgb_norm = np.swapaxes(img_rgb_norm, 0, 2)
         img_rgb_norm = np.swapaxes(img_rgb_norm, 1, 2)
@@ -117,7 +92,6 @@ class FileIter(DataIter):
         mask_croped = mask[crop_y:crop_y + crop_size, crop_x: crop_x + crop_size]
         mask_croped = np.expand_dims(mask_croped, axis=0)
         mask_croped = np.expand_dims(mask_croped, axis=0)
-
         return img_crop, mask_croped
 
     @property
