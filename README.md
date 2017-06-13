@@ -38,7 +38,7 @@ The reflectance is used to calculate different reflectance indices, which sum up
 ## Neural networks
 My solution is based on modified fully convolutional neural network architecture called U-Net, that was previously used for the tasks of biomedical image segmentation. The U-Net architecture allows combining low-level feature maps with higher-level ones, which enables precise localization. In addition, I tried to improve segmentation accuracy using generative adversarial network as described in credits section. 
 
-## Techical Report
+## Technical Report
 * [ADD LINK SOON]
 
 ## Credits and Inspiration
