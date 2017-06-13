@@ -29,7 +29,7 @@ Pansharpening is a process of merging high-resolution panchromatic and lower res
 
 <img src="https://raw.githubusercontent.com/osin-vladimir/kaggle-satellite-imagery-feature-detection/master/images/sharpening.png?token=AHHppqngwGtJtdx0isqddg3I9RvKc3iRks5ZSRBOwA%3D%3D">
 
-##  [Reflectance Index](https://www.kaggle.com/resolut/panchromatic-sharpening)
+##  [Reflectance Index](https://www.kaggle.com/resolut/waterway-0-095-lb)
 
 The reflectance is used to calculate different reflectance indices, which sum up the large amount of information contained in a reflectance spectrum. Some of them are related to plant biomass, photosynthetic size and radiation use efficiency. Other parameters are related to the physiological status, e.g. water content.
  
