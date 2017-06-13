@@ -36,7 +36,10 @@ The reflectance is used to calculate different reflectance indices, which sum up
 <img src="https://www.kaggle.io/svf/946335/41cdd3f508e0edbce109f475ecc67d1a/__results___files/__results___7_0.png"> 
 
 ## Neural networks
-My solution is based on modified fully convolutional neural network architecture called U-Net, that was previously used for the tasks of biomedical image segmentation. The U-Net architecture allows combining low-level feature maps with higher-level ones, which enables precise localization. In addition, I tried to improve segmentation accuracy using 
+My solution is based on modified fully convolutional neural network architecture called U-Net, that was previously used for the tasks of biomedical image segmentation. The U-Net architecture allows combining low-level feature maps with higher-level ones, which enables precise localization. In addition, I tried to improve segmentation accuracy using generative adversarial network as described in credits section. 
+
+## Techical Report
+* [ADD LINK SOON]
 
 ## Credits and Inspiration
 1. [Towards Adversarial Retinal Image Synthesis](https://arxiv.org/pdf/1701.08974.pdf) [(code)](https://github.com/costapt/vess2ret)
