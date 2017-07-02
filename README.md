@@ -39,7 +39,7 @@ The reflectance is used to calculate different reflectance indices, which sum up
 My solution is based on modified fully convolutional neural network architecture called U-Net, that was previously used for the tasks of biomedical image segmentation. The U-Net architecture allows combining low-level feature maps with higher-level ones, which enables precise localization. In addition, I tried to improve segmentation accuracy using generative adversarial network as described in credits section. 
 
 ## Technical Report
-* [ADD LINK SOON]
+* [Satellite Imagery Feature Detection using Deep Convolutional Neural Network: A Kaggle Competition](https://arxiv.org/abs/1706.06169)
 
 ## Credits and Inspiration
 1. [Towards Adversarial Retinal Image Synthesis](https://arxiv.org/pdf/1701.08974.pdf) [(code)](https://github.com/costapt/vess2ret)
