@@ -32,8 +32,6 @@ Pansharpening is a process of merging high-resolution panchromatic and lower res
 ##  [Reflectance Index](https://www.kaggle.com/resolut/waterway-0-095-lb)
 
 The reflectance is used to calculate different reflectance indices, which sum up the large amount of information contained in a reflectance spectrum. Some of them are related to plant biomass, photosynthetic size and radiation use efficiency. Other parameters are related to the physiological status, e.g. water content.
- 
-<img src="https://www.kaggle.io/svf/946335/41cdd3f508e0edbce109f475ecc67d1a/__results___files/__results___7_0.png"> 
 
 ## Neural networks
 My solution is based on modified fully convolutional neural network architecture called U-Net, that was previously used for the tasks of biomedical image segmentation. The U-Net architecture allows combining low-level feature maps with higher-level ones, which enables precise localization. In addition, I tried to improve segmentation accuracy using generative adversarial network as described in credits section. 
